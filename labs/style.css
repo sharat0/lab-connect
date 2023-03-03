@@ -1,0 +1,36 @@
+#main{
+    padding-bottom: 30px;
+  }
+  #myVideo {
+  margin-top: 0px;
+  margin-left: 7%;
+  min-width: 90%;
+  width: 90%;
+  height: 550px;
+  min-height: 50%;
+}
+.flex{
+  margin-left: 15%;
+}
+.left, .right{
+  padding: 10px;
+  transition:  all .3s ease-in-out;
+  width: 40%;
+  margin-left: 1%;
+  }
+  .left img, .right img{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .left:hover, .right:hover{
+    transform: scale(1.1);
+    box-shadow:  0 0 10px #000;
+  }
+  .desc{
+    background-color: red;
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+  }

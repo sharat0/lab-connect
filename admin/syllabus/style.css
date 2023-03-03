@@ -1,0 +1,98 @@
+#home{
+    padding-bottom: 25px;
+}
+form{
+    width: 50%;
+    margin-left: 25%;
+    min-height: 70vh;
+    border-radius: 15px;
+    height: auto;
+    /* box-shadow: 0 0  10px #000; */
+    padding-top: 25px;
+    padding-left: 13.5%;
+    padding-bottom: 50px;
+}
+
+.text{
+    display: block;
+    padding-right: 25%;
+    color: #1d67cf;
+    font-size: 1.3rem;
+    margin-bottom: 8%;
+}
+
+.label{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #1d67cf;
+    font-size: 1.3rem;
+}
+
+input, select, option{
+    display: block;
+    width: 75%;
+    border: none;
+    outline: none;
+    background-color: #e5ebfa;
+    padding: 10px;
+    border-radius:  10px;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+  }
+  
+  :-moz-placeholder {
+    text-align: center;
+  }
+
+textarea{
+    background-color: #e5ebfa;
+    resize: none;
+    width: 75%;
+    border: none;
+    border-radius:  10px;
+    padding: 10px;
+}
+
+.btn-primary{
+    margin-top: 20px;
+    margin-left: 12%;
+    width: 50%;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+    border: 2px solid rgb(122 135 209);;
+    color: #000;
+    /* font-weight: bold; */
+    border-radius: 15px;
+}
+
+.btn-primary:hover{
+    background-color: rgb(122 135 209);;
+    cursor: pointer;    
+    box-shadow: 0 0 15px #000;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+
+
+select{
+    text-align: center;
+}
+
+input[type="radio"]{
+    display: inline-block;
+    width: 30px;
+}
+
+.available-time{
+    background-color:#e5ebfa;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}

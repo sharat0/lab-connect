@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #0f4d6b;
+}
+
+body{
+    background: url(../img/college.png) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#main{
+    height: 80vh;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 10vh;
+    box-shadow: 0 0 10px #000;
+    padding-top: 2%;
+    padding-left: 10%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+
+.head1{
+    display: block;
+    font-size: 4rem;
+    padding-left: 11%;
+    font-family: 'Maven Pro', sans-serif;
+    margin-bottom: 10%;
+    text-transform: uppercase;
+}
+
+input{
+    display: block;
+    height: 30px;
+    width: 70%;
+    margin-bottom: 50px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+}
+
+.btn-primary{
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 50%;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+    background-color: rgba(0,0,0,.6);
+    color: #fff;
+    border-radius: 15px;
+}
+
+.btn-primary:hover{
+    border: 1px solid #fff;
+    cursor: pointer;    
+    box-shadow: 0 0 5px #fff;
+    background-color: rgba(0, 0, 0, .8);
+}
