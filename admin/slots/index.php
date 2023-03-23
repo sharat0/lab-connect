@@ -30,33 +30,28 @@
     <span class="head1">Time Slots</span>
 
     <form action="" method="POST" id="form1">
-        <a href="view" target="_blank" rel="noopener noreferrer" class="view">View all Labs</a>
+        <a href="view" target="_blank" rel="noopener noreferrer" class="view">View all Slots</a>
         <span class="text">Create new time slots for students to easily access the labs.</span>
 
-        
         <span class="label">Time Slot 1 *</span>
         <input type="time" name="start-time[]" id="time" required>
         <span class="to"> To </span>
         <input type="time" name="end-time[]" id="time" required>
-
 
         <span class="label">Time Slot 2</span>
         <input type="time" name="start-time[]" id="time">
         <span class="to"> To </span>
         <input type="time" name="end-time[]" id="time" >
 
-
         <span class="label">Time Slot 3</span>
         <input type="time" name="start-time[]" id="time" >
         <span class="to"> To </span>
         <input type="time" name="end-time[]" id="time" >
 
-
         <span class="label">Time Slot 4</span>
         <input type="time" name="start-time[]" id="time" >
         <span class="to"> To </span>
         <input type="time" name="end-time[]" id="time" >
-
 
         <span class="label">Time Slot 5</span>
         <input type="time" name="start-time[]" id="time" >
@@ -69,8 +64,6 @@
         <?php
         require('../../essentials/_config.php');
         if (isset($_POST['submit'])) {
-
-
             
             $start_time = $_POST['start-time'];
             $end_time = $_POST['end-time'];
