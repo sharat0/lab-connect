@@ -41,7 +41,7 @@
             <span class="label">Topic Name *</span>
             <input type="text" name="topic-name" id="name" placeholder="Project Topic">
 
-            <span class="label">Teammates Count *</span>
+            <span class="label">Total Seats *</span>
             <input type="number" name="team-mates" id="team-mates" min="1" value="1">
 
             <span class="label">Select Date *</span>
@@ -63,7 +63,6 @@
                             $lab_id = $rows['id'];
                             $name = $rows['name'];
                             echo "<option value='" . $lab_id . "'>" . $name . "</option>";
-
                         }
                     }
                 } else {

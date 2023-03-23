@@ -9,8 +9,8 @@ echo '<nav>
 </nav>
 <div id="nav-menu">
  <ul>
-     <li><a href="/learnersbooth/dashboard">Dashboard</a></li>
      <li><a href="">Home</a></li>
+     <li><a href="hrm">HRM</a></li>
      <li><a href="syllabus">Syllabus</a></li>
      <li><a href="category">Categories</a></li>
      <li><a href="labs">Labs</a></li>
