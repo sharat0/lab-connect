@@ -5,7 +5,7 @@
         // UPDATE status set value 1 where id = $id
         $sql="DELETE FROM category WHERE `category`.`id` = $id";
         $result = mysqli_query($conn, $sql);
-        $sql2="DELETE FROM labs WHERE `category` = $id";
+        $sql2="DELETE FROM labs WHERE `type` = $id";
         $result2 = mysqli_query($conn, $sql2);
         $sql3="DELETE FROM syllabus WHERE `category` = $id";
         $result3 = mysqli_query($conn, $sql3);

@@ -13,7 +13,7 @@ require('../essentials/_config.php');
     <script src="https://kit.fontawesome.com/6d20788c52.js" crossorigin="anonymous"></script>
     <!-- <link rel="shortcut icon" href="img/fav.png" type="image/x-icon"> -->
 
-    <link rel="stylesheet" href="../style.css">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
     <!-- <link rel="stylesheet" href="../style.css"> -->
     <link rel="stylesheet" href="style.css">
 
@@ -34,7 +34,7 @@ require('../essentials/_config.php');
         <div id="logo"><img src="../img/flag.webp" alt="Kristu Jayanti College"></div>
         <div id="nav-item">
             <span class="nav-items"><a href="../">Home</a></span>
-            <span class="nav-items"><a href="../logout.php">Logout</a></span>
+            <span class="nav-items"><a href="/learnersbooth/logout.php">Logout</a></span>
         </div>
     </nav>
     <div id="home">
@@ -69,7 +69,7 @@ require('../essentials/_config.php');
                         $sql4 = "SELECT * FROM labs where id='" . $lab . "'";
                         $result4 = mysqli_query($conn, $sql4);
                         $row4 = mysqli_fetch_assoc($result4);
-                        $lab = $row4['name'];
+                        // $lab = $row4['name'];    
 
 
                         $slot = $row["slot"];
