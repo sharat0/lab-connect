@@ -42,8 +42,12 @@
                     $_SESSION['type']= $type;
                     $_SESSION['dept']= $dept;
 
-                    if ($type==0 or $type==2) {
+                    if ($type==0) {
                         header("location:../student");
+                    }
+                    elseif ($type==2) {
+                        header("location:../faculty");
+                        
                     }
                     else{
                         header("location:../admin");
