@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-require('../essentials/_config.php');
+require('../../essentials/_config.php');
 
 ?>
 
@@ -14,7 +14,7 @@ require('../essentials/_config.php');
     <!-- <link rel="shortcut icon" href="img/fav.png" type="image/x-icon"> -->
 
     <link rel="stylesheet" href="/lab/style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
@@ -29,12 +29,12 @@ require('../essentials/_config.php');
 </head>
 
 <body>
-    <?php include('nav.php') ?>
+    <?php include('../nav2.php') ?>
     <span class="head1">Tickets</span>
-    <span class="btn btn-primary"><a href="faculty-tickets">Faculty Tickets</a></span>
+    <span class="btn btn-primary"><a href="../">Student Tickets</a></span>
 
     <?php
-    $sql = "SELECT * FROM `student_tickets` where status='0' order by id";
+    $sql = "SELECT * FROM `faculty_tickets` where status='0' order by id";
     $result = mysqli_query($conn, $sql);
     if ($result) {
 
@@ -55,7 +55,7 @@ require('../essentials/_config.php');
                 $lab = $row4['name'];
 
 
-                $slot = $row["slot"];
+                $slot = $row["time"];
 
                 $sql5 = "SELECT * FROM slots where id='" . $slot . "'";
                 $result5 = mysqli_query($conn, $sql5);
@@ -67,19 +67,17 @@ require('../essentials/_config.php');
 
                 echo '<div class=flex-opposite>
         <span class="uid text dt">ID: #' . $id . '</span>';
-        // string to date
-        $date = date_create($row["dt"]);
-        echo '<span class="dt text book-dt"> ' .date_format($date, "d/m/Y H:i:s" ). '</span>
+                // string to date
+                $date = date_create($row["dt"]);
+                echo '<span class="dt text book-dt"> ' . date_format($date, "d/m/Y H:i:s") . '</span>
         </div>';
 
                 echo '<span class="uid text">Name : ' . $name . '</span>';
                 echo '<span class="lab text">Lab : ' . $lab . '</span>';
-                echo '<span class="name text">Faculty Incharge : ' . $row["guide"] . '</span>';
                 echo '<span class="topic text">Purpose of booking : ' . $row["topic"] . '</span>';
-                echo '<span class="team text">Team members : ' . $row["team"] . '</span>';
                 echo '<span class="date text">Booking Date : ' . $row["date"] . '</span>';
                 echo '<span class="slot text">Booking Slot : ' . $st . ' -  ' . $et . '</span>';
-                echo '<span class="slot text">Additional Requirements : ' . $row['requirements'] . '</span>';
+                echo '<span class="slot text">Requirements : ' . $row['requirements'] . '</span>';
                 echo '<div class="flex-opposite">
         <a href="essentials/_decline.php?id=' . $id . '" target="_blank" rel="noopener noreferrer"  class="btn btn-sec">Decline</a>
         <a href="essentials/_approve.php?id=' . $id . '" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Approve</a>
@@ -89,8 +87,7 @@ require('../essentials/_config.php');
 
 
             }
-        }
-        else{
+        } else {
             echo '<div class="block">
             <span class="head2">No pending requests</span>
             </div>';

@@ -18,6 +18,16 @@
         exit;
     }
     $uid=$_SESSION['id'];
+    // get name from login table
+    $sql = "SELECT * FROM login where id='$uid'";
+    $result = mysqli_query($conn, $sql);
+    $uname=null;
+    if ($result) {
+        if (mysqli_num_rows($result) > 0) {
+            $row = mysqli_fetch_assoc($result);
+            $uname = $row['name'];
+        }
+    }
 
     ?>
 </head>
@@ -35,14 +45,8 @@
         <form action="" method="POST" id="form1">
             <span class="text">Book your Lab here and please wait for the confirmation through the mail</span>
 
-            <span class="label">Guide Name *</span>
-            <input type="text" name="guide-name" id="name" placeholder="Guide Name">
-
             <span class="label">Topic Name *</span>
             <input type="text" name="topic-name" id="name" placeholder="Project Topic">
-
-            <span class="label">Total Seats *</span>
-            <input type="number" name="team-mates" id="team-mates" min="1" value="1">
 
             <span class="label">Select Date *</span>
             <input type="date" name="date" id="date" placeholder="Select a date">
@@ -110,21 +114,20 @@
             <?php
 
             if (isset($_POST['submit'])) {
-                $date = $_POST['date'];
-                $guide = $_POST['guide-name'];
-                $topic = $_POST['topic-name'];
-                $team = $_POST['team-mates'];
-                $requirements = $_POST['requirements'] ? $_POST['requirements'] : '-';
                 $lab = $_POST['lab'];
+                $topic = $_POST['topic-name'];
+                $date = $_POST['date'];
+                $requirements = $_POST['requirements'] ? $_POST['requirements'] : '-';
                 $slot = $_POST['slot'];
                 
-                $sql = "INSERT INTO `student_tickets` (`id`, `uid`, `guide`, `topic`, `team`, `lab`,  `date`, `slot`, `requirements`, `status`) VALUES (null, '$uid', '$guide', '$topic', '$team', '$lab', '$date', '$slot', '$requirements', '0')";
+                $sql = "INSERT INTO `faculty_tickets` (`id`, `uid`, `name`, `lab`, `topic`, `requirements`, `date`, `time`, `status`) VALUES (null, '$uid', '$uname', '$lab', '$topic','$requirements', '$date', '$slot', '0')";
                 $result = mysqli_query($conn, $sql);
                 if ($result) {
                     echo '<script>alert("Your request has been sent to the admin. Please wait for the confirmation through the mail")</script>';
                 } else {
                     echo '<script>alert("Unable to send the request")</script>';
                 }
+
             }
             ?>
 
